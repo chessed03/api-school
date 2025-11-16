@@ -6,12 +6,12 @@ import { SchoolsModule } from './schools/schools.module';
   imports: [
     SchoolsModule,
     TypeOrmModule.forRoot({
-      type: "mysql",
-      host: "localhost",
+      type: 'mysql',
+      host: 'localhost',
       port: 3307,
-      username: "user_crud",
-      password: "root",
-      database: "db_crud",
+      username: 'user_crud',
+      password: 'root',
+      database: 'db_crud',
       autoLoadEntities: true,
       synchronize: true,
     }),

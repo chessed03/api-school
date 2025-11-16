@@ -7,13 +7,11 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class SchoolsService {
-
   constructor(
-
     @InjectRepository(School)
     private readonly schoolRepository: Repository<School>
 
-  ){}
+  ) {}
 
   async create(createSchoolDto: CreateSchoolDto) {
     return 'This action adds a new school';
