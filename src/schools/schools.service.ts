@@ -9,7 +9,7 @@ import { Repository } from 'typeorm';
 export class SchoolsService {
   constructor(
     @InjectRepository(School)
-    private readonly schoolRepository: Repository<School>,
+    private readonly schoolRepository: Repository<School>
   ) {}
 
   async create(createSchoolDto: CreateSchoolDto) {
