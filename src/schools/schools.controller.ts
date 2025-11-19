@@ -1,7 +1,8 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { SchoolsService } from './schools.service';
 import { CreateSchoolDto } from './dto/create-school.dto';
 import { UpdateSchoolDto } from './dto/update-school.dto';
+import { AuthGuard } from '@auth/guard/auth.guard';
 
 @Controller('schools')
 export class SchoolsController {
@@ -13,6 +14,7 @@ export class SchoolsController {
   }
 
   @Get()
+  @UseGuards(AuthGuard)
   findAll() {
     return this.schoolsService.findAll();
   }

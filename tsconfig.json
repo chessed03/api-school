@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "paths": {
+      "@auth/*": ["src/auth/*"],
+      "@schools/*": ["src/schools/*"]
+    },
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "resolvePackageJsonExports": true,
